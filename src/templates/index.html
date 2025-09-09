@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% block title%} {{title}} {%endblock%} 
+
+{% block content%} 
+<h1>Welcome to the Home Page</h1>
+<h2>{{title}}</h2>
+<p>This is the main content of the home page.</p>
+<p> {{request.user}} {{request.method}}-{{request.user.is_authenticated}}</p>
+<p>page visiting : {{queryset}}</p>
+{%endblock%}
