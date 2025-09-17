@@ -1,12 +1,10 @@
-{% extends 'base.html'%}
+{% extends 'base.html'%} 
 {% block title%} {{title}} {%endblock%} 
-
-{% block content%} 
-<h1>Welcome to the Home Page</h1>
-<h2>{{title}}</h2>
-<p>This is the main content of the home page.</p>
-<p> {{request.user}} {{request.method}}-{{request.user.is_authenticated}}</p>
-<p>Page Visit Count : {{page_visit_count}}</p>
-<p>Percent : ({{page_visit_count}})</p>
-<p>Total visiting : {{total_visit_count}}</p>
+{% block content%}
+<h1>My page </h1>
+<h2>Hello again!</h2>
+{% include 'snippets/messages.html' %}
+<p>Page Visits: {{page_visit_count}}</p>
+<p>Percent : ({{page_visit_count|floatformat:1}}%)</p>
+<p>Total visits: {{total_visit_count}}</p>
 {%endblock%}
