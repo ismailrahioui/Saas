@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #my_app
     'visits',
+    'commando'
     
 ]
 
@@ -139,6 +140,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_BASE_DIR= BASE_DIR / "staticfiles"
+STATICFILES_BASE_DIR.mkdir(exist_ok=True,parents=True)
 STATICFILES_VENDOR_DIR= STATICFILES_BASE_DIR / "vendors"
 
 STATICFILES_DIRS=[
